@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Crafter - Fast & Smooth Educational Platform</title>
+    
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Critical CSS for faster rendering -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; overflow-x: hidden; }
+        .loading-screen { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 9999; transition: opacity 0.5s ease;
+        }
+        .spinner {
+            width: 50px; height: 50px; border: 3px solid rgba(255,106,0,0.3);
+            border-radius: 50%; border-top-color: #ff6a00;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        html { scroll-behavior: smooth; }
+    </style>
+    
+    <!-- External resources -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/Crafter.png" alt="Code Crafter Logo" loading="eager">
+            </div>
+            <div class="name">CODE CRAFTER</div>
+            
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="responsive_menu">
+            <label for="responsive_menu" class="menu-toggle"></label>
+            
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#programming">Programming</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="courses.html">All Courses</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Font Awesome Theme Switch -->
+        <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+            <label for="theme-toggle" class="theme-label">
+                <i class="fas fa-sun light-icon"></i>
+                <i class="fas fa-moon dark-icon"></i>
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search courses..." autocomplete="off">
+            <button class="search-btn" type="button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background"></div>
+            <div class="container">
+                <div class="content">
+                    <div class="text-content">
+                        <h1><span class="bg_hd animated-text">Welcome to Code Crafter</span></h1>
+                        <h2 class="heading_title">Your Gateway to Programming Excellence</h2>
+                        <h2 class="heading_title">Study Made Easy</h2>
+                        <p class="title">Discover a world of knowledge with our comprehensive collection of notes, programming tutorials, and resources. Start your coding journey today!</p>
+                        <div class="cta-buttons">
+                            <a href="#notes" class="cta-button primary">
+                                <i class="fas fa-book-open"></i>
+                                Get Started
+                            </a>
+                            <a href="#programming" class="cta-button secondary">
+                                <i class="fas fa-code"></i>
+                                Explore Courses
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section id="notes" class="notes-section">
+            <div class="section-header">
+                <h2>BCA-1</h2>
+                <p class="section-subtitle">CLASS NOTES</p>
+            </div>
+
+            <div class="notes-grid">
+                <!-- Operating System Card -->
+                <div class="note-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80&w=800" alt="Operating System" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Operating System</h3>
+                        <p>Learn about computer operating systems and their fundamentals</p>
+                        <div class="card-tags">
+                            <span class="tag">OS Concepts</span>
+                            <span class="tag">File Systems</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1duUPkOh5MViFHGHNqMl9Bf_Nt8RSv8g2" class="card-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Notes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DOS Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="c_lang.jpg" alt="DOS Commands" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>DOS Commands</h3>
+                        <p>Master Disk Operating System commands and operations</p>
+                        <div class="card-tags">
+                            <span class="tag">Commands</span>
+                            <span class="tag">CLI</span>
+                        </div>
+                        <a href="#" class="card-button disabled">
+                            <i class="fas fa-clock"></i>
+                            Coming Soon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Computer Fundamental Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="c.jpg" alt="Computer Fundamental" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Computer Fundamental</h3>
+                        <p>Basic concepts and principles of computer science</p>
+                        <div class="card-tags">
+                            <span class="tag">Theory</span>
+                            <span class="tag">Concepts</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1Hf_QD_aYQLnoctBHhveLLw9rD3F2NIKO" class="card-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Notes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FOX-PRO Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <img src="huz_img.jpg" alt="FOX-PRO" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>FOX-PRO</h3>
+                        <p>Database management and programming with FoxPro</p>
+                        <div class="card-tags">
+                            <span class="tag">Database</span>
+                            <span class="tag">DBMS</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1HhznoqFeU6JzqlTiYwbg2jk4DL5Y9A7L" class="card-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Notes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Q-BASIC Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image">
+                        <img src="img1.jpg" alt="Q-BASIC" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Q-BASIC</h3>
+                        <p>Learn programming basics with Q-BASIC language</p>
+                        <div class="card-tags">
+                            <span class="tag">Programming</span>
+                            <span class="tag">Basics</span>
+                        </div>
+                        <a href="#" class="card-button disabled">
+                            <i class="fas fa-clock"></i>
+                            Coming Soon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mathematics Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-image">
+                        <img src="c-dsa.jpg" alt="Mathematics" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mathematics</h3>
+                        <p>Mathematical concepts and problem-solving techniques</p>
+                        <div class="card-tags">
+                            <span class="tag">Algebra</span>
+                            <span class="tag">Calculus</span>
+                        </div>
+                        <a href="#" class="card-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Notes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programming Section -->
+        <section id="programming" class="programming-section">
+            <div class="section-header">
+                <h2>PROGRAMMING RESOURCES</h2>
+                <p class="section-subtitle">LEARN AND PRACTICE CODING WITH THESE RESOURCES</p>
+            </div>
+
+            <div class="notes-grid">
+                <!-- C Programming Card -->
+                <div class="note-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="c_lang.jpg" alt="C Programming" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fab fa-cuttlefish"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>C Programming</h3>
+                        <p>Master the fundamentals of programming with C language</p>
+                        <div class="difficulty-badge beginner">Beginner</div>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 40 hours</span>
+                            <span><i class="fas fa-users"></i> 1.2k students</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1XgH5bAMhQD0tvWGapzWCVosb6nNYzSaA" class="card-button">
+                            <i class="fab fa-cuttlefish"></i>
+                            Learn C
+                        </a>
+                    </div>
+                </div>
+
+                <!-- C++ Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="c-dsa.jpg" alt="C++ Programming" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fab fa-cuttlefish"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>C++ Programming</h3>
+                        <p>Learn object-oriented programming with C++</p>
+                        <div class="difficulty-badge intermediate">Intermediate</div>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 50 hours</span>
+                            <span><i class="fas fa-users"></i> 890 students</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1XUUQ-VL5dYvZ0eYMMlEcoU-QzWMk4lt4" class="card-button">
+                            <i class="fab fa-cuttlefish"></i>
+                            Learn C++
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Java Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="huz_img.jpg" alt="Java Programming" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fab fa-java"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Java Programming</h3>
+                        <p>Explore Java programming language and its applications</p>
+                        <div class="difficulty-badge intermediate">Intermediate</div>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 60 hours</span>
+                            <span><i class="fas fa-users"></i> 2.1k students</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1XjRI-J_iKhJmgyfoBayqGTZsVUYGW8e7" class="card-button">
+                            <i class="fab fa-java"></i>
+                            Learn Java
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Python Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <img src="img1.jpg" alt="Python Programming" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fab fa-python"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Python Programming</h3>
+                        <p>Learn Python programming for versatile applications</p>
+                        <div class="difficulty-badge beginner">Beginner</div>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 45 hours</span>
+                            <span><i class="fas fa-users"></i> 3.2k students</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1XvHQ1TrhuzdbsQJtqoJK85383fdyLmAO" class="card-button">
+                            <i class="fab fa-python"></i>
+                            Learn Python
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DSA Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-image">
+                        <img src="c-dsa.jpg" alt="DSA with C++" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>DSA with C++</h3>
+                        <p>Master Data Structures and Algorithms using C++</p>
+                        <div class="difficulty-badge advanced">Advanced</div>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 80 hours</span>
+                            <span><i class="fas fa-users"></i> 750 students</span>
+                        </div>
+                        <a href="#" class="card-button disabled">
+                            <i class="fas fa-clock"></i>
+                            Coming Soon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Development Card -->
+                <div class="note-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-image">
+                        <img src="img1.jpg" alt="Web Development" loading="lazy">
+                        <div class="card-overlay">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Web Development</h3>
+                        <p>Learn modern web development technologies</p>
+                        <div class="difficulty-badge intermediate">Intermediate</div>
+                        <div class="card-stats">
+                            <span><i class="fas fa-clock"></i> 70 hours</span>
+                            <span><i class="fas fa-users"></i> 1.8k students</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1aUBinq7h1MCZQtNgp0-5y8RZSIRQ5RnN" class="card-button">
+                            <i class="fas fa-globe"></i>
+                            Learn Web Dev
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="personal-info-section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p class="section-subtitle">Get to know the creator behind Code Crafter</p>
+            </div>
+            
+            <div class="personal-card">
+                <div class="personal-image">
+                    <img src="img/huz_img.jpg" alt="Huzaif Profile Picture" loading="lazy">
+                </div>
+                <div class="personal-content">
+                    <h2>I AM HUZAIF</h2>
+                    <p>I am a passionate web developer with expertise in creating modern and responsive websites. My goal is to build user-friendly and visually appealing web applications that solve real-world problems.</p>
+                    
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>mdhuzaifsh786@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>8434890116</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>MERN Stack Developer</span>
+                        </div>
+                        <div class="info-item social-links">
+                            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">Have questions? Feel free to reach out!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>mdhuzaifsh786@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 8434890116</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to get the latest courses and programming resources</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="button">
+                        <i class="fas fa-bell"></i>
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <marquee>Welcome to my education website! Feel free to explore and get in touch.</marquee>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 Code Crafter | All Rights Reserved</p>
+            <p class="author">Created with ❤️ by HUZAIF</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+</html>
