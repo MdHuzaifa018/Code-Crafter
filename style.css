@@ -167,6 +167,7 @@ header {
     display: none;
 }
 
+
 .theme-label {
     display: flex;
     align-items: center;
@@ -238,7 +239,7 @@ header {
     
     .navbar ul {
         position: absolute;
-        top: 200px;
+        top: 150px;
         right: 0;
         left: 0;
         z-index: 3;
