@@ -1,368 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Courses - Code Crafter</title>
-    
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sriracha&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sriracha&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
-        <div class="spinner"></div>
+      <div class="spinner"></div>
     </div>
 
     <!-- Header -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/Crafter.png" alt="Code Crafter Logo">
-            </div>
-            <div class="name">CODE CRAFTER</div>
-            
-            <!-- Mobile Menu Toggle -->
-            <input type="checkbox" id="responsive_menu">
-            <label for="responsive_menu" class="menu-toggle"></label>
-            
-            <ul id="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#notes">Notes</a></li>
-                <li><a href="index.html#programming">Programming</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="courses.html">All Courses</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Theme Switch -->
-        <div class="theme-switch">
-            <input type="checkbox" id="theme-toggle" class="theme-checkbox">
-            <label for="theme-toggle" class="theme-label">
-                <i class="fas fa-sun light-icon"></i>
-                <i class="fas fa-moon dark-icon"></i>
-                <span class="toggle-slider"></span>
-            </label>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="img/Crafter.png" alt="Code Crafter Logo" />
         </div>
-        
-        <!-- Search Box -->
-        <div class="search-box">
-            <input type="text" id="search" placeholder="Search courses...">
-            <button class="search-btn" type="button">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
+        <div class="name">CODE CRAFTER</div>
+
+        <!-- Mobile Menu Toggle -->
+        <input type="checkbox" id="responsive_menu" />
+        <label for="responsive_menu" class="menu-toggle"></label>
+
+        <ul id="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#notes">Notes</a></li>
+          <li><a href="index.html#programming">Programming</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="courses.html">All Courses</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Switch -->
+      <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
+        <label for="theme-toggle" class="theme-label">
+          <i class="fas fa-sun light-icon"></i>
+          <i class="fas fa-moon dark-icon"></i>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+
+      <!-- Search Box -->
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Search courses..." />
+        <button class="search-btn" type="button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
     </header>
 
     <main>
-        <!-- Courses Hero Section -->
-        <section id="courses-hero" class="hero-section">
-            <div class="container">
-                <div class="content">
-                    <h1><span class="bg_hd">Best YouTube Courses</span></h1>
-                    <h2 class="heading_title">Explore Our Comprehensive Course Catalog</h2>
-                    <p class="title">Watch premium quality programming tutorials from top instructors and enhance your coding skills with hands-on projects.</p>
-                    <div class="cta-buttons">
-                        <a href="#all-courses" class="cta-button primary">
-                            <i class="fas fa-play"></i>
-                            Start Learning
-                        </a>
-                        <a href="index.html" class="cta-button secondary">
-                            <i class="fas fa-arrow-left"></i>
-                            Back to Home
-                        </a>
-                    </div>
-                </div>
+      <!-- Courses Hero Section -->
+      <section id="courses-hero" class="hero-section">
+        <div class="container">
+          <div class="content">
+            <h1><span class="bg_hd">Best YouTube Courses</span></h1>
+            <h2 class="heading_title">
+              Explore Our Comprehensive Course Catalog
+            </h2>
+            <p class="title">
+              Watch premium quality programming tutorials from top instructors
+              and enhance your coding skills with hands-on projects.
+            </p>
+            <div class="cta-buttons">
+              <a href="#all-courses" class="cta-button primary">
+                <i class="fas fa-play"></i>
+                Start Learning
+              </a>
+              <a href="index.html" class="cta-button secondary">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- All Courses Section -->
-        <section id="all-courses" class="courses-section">
-            <div class="section-header">
-                <h2>ALL AVAILABLE COURSES</h2>
-                <p class="section-subtitle">Master programming with these premium tutorials</p>
+      <!-- All Courses Section -->
+      <section id="all-courses" class="courses-section">
+        <div class="section-header">
+          <h2>ALL AVAILABLE COURSES</h2>
+          <p class="section-subtitle">
+            Master programming with these premium tutorials
+          </p>
+        </div>
+
+        <div class="notes-grid">
+          <!-- Web Development Course -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img
+                src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?s…AIYBjgBQAE=&rs=AOn4CLB6VzxANxt3dHm91HW9lLfDlxvmuA"
+                alt="Web Development"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-globe"></i>
+              </div>
             </div>
-
-            <div class="notes-grid">
-                <!-- Web Development Course -->
-                <div class="note-card course-card">
-                    <div class="card-image">
-                        <img src="img/img1.jpg" alt="Web Development">
-                        <div class="card-overlay">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Complete Web Development</h3>
-                        <p>Master HTML, CSS, JavaScript, and modern frameworks to build responsive websites</p>
-                        <div class="course-info">
-                            <div class="difficulty-badge intermediate">Intermediate</div>
-                            <div class="duration"><i class="fas fa-clock"></i> 15+ Hours</div>
-                        </div>
-                        <div class="card-stats">
-                            <span><i class="fas fa-star"></i> 4.8/5</span>
-                            <span><i class="fas fa-users"></i> 2.3k students</span>
-                        </div>
-                        <a href="https://youtu.be/HcOc7P5BMi4?si=example" target="_blank" class="card-button">
-                            <i class="fas fa-play"></i>
-                            Watch Now
-                        </a>
-                    </div>
+            <div class="card-content">
+              <h3>Complete Web Development</h3>
+              <p>
+                Master HTML, CSS, JavaScript, and modern frameworks to build
+                responsive websites
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge intermediate">Intermediate</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 15+ Hours
                 </div>
-
-                <!-- C Programming -->
-                <div class="note-card course-card">
-                    <div class="card-image">
-                        <img src="img/c_lang.jpg" alt="C Programming">
-                        <div class="card-overlay">
-                            <i class="fab fa-cuttlefish"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>C Programming Masterclass</h3>
-                        <p>Learn C Programming from basics to advanced concepts with practical examples</p>
-                        <div class="course-info">
-                            <div class="difficulty-badge beginner">Beginner</div>
-                            <div class="duration"><i class="fas fa-clock"></i> 12+ Hours</div>
-                        </div>
-                        <div class="card-stats">
-                            <span><i class="fas fa-star"></i> 4.9/5</span>
-                            <span><i class="fas fa-users"></i> 3.1k students</span>
-                        </div>
-                        <a href="https://youtu.be/aZb0iu4uGwA?si=EIa5exmUpmZhGDoo" target="_blank" class="card-button">
-                            <i class="fas fa-play"></i>
-                            Watch Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- C++ Programming -->
-                <div class="note-card course-card">
-                    <div class="card-image">
-                        <img src="img/c++.jpg" alt="C++ Programming">
-                        <div class="card-overlay">
-                            <i class="fab fa-cuttlefish"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>C++ Complete Course</h3>
-                        <p>Learn C++ Programming from basics to advanced concepts with OOP principles</p>
-                        <div class="course-info">
-                            <div class="difficulty-badge intermediate">Intermediate</div>
-                            <div class="duration"><i class="fas fa-clock"></i> 18+ Hours</div>
-                        </div>
-                        <div class="card-stats">
-                            <span><i class="fas fa-star"></i> 4.7/5</span>
-                            <span><i class="fas fa-users"></i> 1.9k students</span>
-                        </div>
-                        <a href="https://youtu.be/e7sAf4SbS_g?si=WXg-Wqhe5-S_Jy_N" target="_blank" class="card-button">
-                            <i class="fas fa-play"></i>
-                            Watch Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Java Programming -->
-                <div class="note-card course-card">
-                    <div class="card-image">
-                        <img src="img/huz_img.jpg" alt="Java Programming">
-                        <div class="card-overlay">
-                            <i class="fab fa-java"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Java Complete Bootcamp</h3>
-                        <p>Learn Java Programming from basics to advanced concepts including enterprise development</p>
-                        <div class="course-info">
-                            <div class="difficulty-badge intermediate">Intermediate</div>
-                            <div class="duration"><i class="fas fa-clock"></i> 25+ Hours</div>
-                        </div>
-                        <div class="card-stats">
-                            <span><i class="fas fa-star"></i> 4.8/5</span>
-                            <span><i class="fas fa-users"></i> 2.7k students</span>
-                        </div>
-                        <a href="https://youtube.com/playlist?list=PL78RhpUUKSweClRi_l05UgfE3053-zkRf&si=ddvSyUC6c9JwRPXB" target="_blank" class="card-button">
-                            <i class="fas fa-play"></i>
-                            Watch Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Python Programming -->
-                <div class="note-card course-card">
-                    <div class="card-image">
-                        <img src="img/img1.jpg" alt="Python Programming">
-                        <div class="card-overlay">
-                            <i class="fab fa-python"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Python for Everyone</h3>
-                        <p>Complete Python programming course covering basics to advanced topics with real projects</p>
-                        <div class="course-info">
-                            <div class="difficulty-badge beginner">Beginner</div>
-                            <div class="duration"><i class="fas fa-clock"></i> 20+ Hours</div>
-                        </div>
-                        <div class="card-stats">
-                            <span><i class="fas fa-star"></i> 4.9/5</span>
-                            <span><i class="fas fa-users"></i> 4.2k students</span>
-                        </div>
-                        <a href="https://youtu.be/rfscVS0vtbw?si=example" target="_blank" class="card-button">
-                            <i class="fas fa-play"></i>
-                            Watch Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- DSA with C++ -->
-                <div class="note-card course-card">
-                    <div class="card-image">
-                        <img src="img/c++dsa.jpg" alt="DSA with C++">
-                        <div class="card-overlay">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>DSA with C++</h3>
-                        <p>Master Data Structures and Algorithms for efficient problem-solving and interviews</p>
-                        <div class="course-info">
-                            <div class="difficulty-badge advanced">Advanced</div>
-                            <div class="duration"><i class="fas fa-clock"></i> 35+ Hours</div>
-                        </div>
-                        <div class="card-stats">
-                            <span><i class="fas fa-star"></i> 4.9/5</span>
-                            <span><i class="fas fa-users"></i> 1.5k students</span>
-                        </div>
-                        <a href="https://youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&si=9r-Al2urj2IVb9x1" target="_blank" class="card-button">
-                            <i class="fas fa-play"></i>
-                            Watch Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- React JS -->
-                <div class="note-card course-card">
-                    <div class="card-image">
-                        <img src="img/img1.jpg" alt="React JS">
-                        <div class="card-overlay">
-                            <i class="fab fa-react"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>React JS Complete Guide</h3>
-                        <p>Build modern web applications with React JS and learn component-based development</p>
-                        <div class="course-info">
-                            <div class="difficulty-badge intermediate">Intermediate</div>
-                            <div class="duration"><i class="fas fa-clock"></i> 22+ Hours</div>
-                        </div>
-                        <div class="card-stats">
-                            <span><i class="fas fa-star"></i> 4.8/5</span>
-                            <span><i class="fas fa-users"></i> 1.8k students</span>
-                        </div>
-                        <a href="#" class="card-button disabled">
-                            <i class="fas fa-clock"></i>
-                            Coming Soon
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Node JS -->
-                <div class="note-card course-card">
-                    <div class="card-image">
-                        <img src="img/c_lang.jpg" alt="Node JS">
-                        <div class="card-overlay">
-                            <i class="fab fa-node-js"></i>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Node JS Backend Development</h3>
-                        <p>Learn server-side JavaScript with Node.js and build scalable backend applications</p>
-                        <div class="course-info">
-                            <div class="difficulty-badge intermediate">Intermediate</div>
-                            <div class="duration"><i class="fas fa-clock"></i> 28+ Hours</div>
-                        </div>
-                        <div class="card-stats">
-                            <span><i class="fas fa-star"></i> 4.7/5</span>
-                            <span><i class="fas fa-users"></i> 1.3k students</span>
-                        </div>
-                        <a href="#" class="card-button disabled">
-                            <i class="fas fa-clock"></i>
-                            Coming Soon
-                        </a>
-                    </div>
-                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.8/5</span>
+                <span><i class="fas fa-users"></i> 2.3k students</span>
+              </div>
+              <a
+                href="https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&si=ytazcdlEYuxOiWO6"
+                target="_blank"
+                class="card-button"
+              >
+                <i class="fas fa-play"></i>
+                Watch Now
+              </a>
             </div>
-        </section>
+          </div>
+          <!-- Web Development Course -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img
+                src="https://i.ytimg.com/vi/Vi9bxu-M-ag/hqdefault.jpg?s…BACGAY4AUAB&rs=AOn4CLACritBfQVG4iCPb9sIYwIDAGV1pA"
+                alt="Web Development"
+              />
+              <div class="card-overlay">
+                <i class="fas fa-globe"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Complete Web Development</h3>
+              <p>
+                Master HTML, CSS, JavaScript, and modern frameworks to build
+                responsive websites
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge intermediate">Intermediate</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 15+ Hours
+                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.8/5</span>
+                <span><i class="fas fa-users"></i> 2.3k students</span>
+              </div>
+              <a
+                href="https://youtube.com/playlist?list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD&si=ny91YCHDlTds8aEP"
+                target="_blank"
+                class="card-button"
+              >
+                <i class="fas fa-play"></i>
+                Watch Now
+              </a>
+            </div>
+          </div>
 
-        <!-- Course Categories -->
-        <section class="categories-section">
-            <div class="section-header">
-                <h2>Browse by Category</h2>
-                <p class="section-subtitle">Find courses by your preferred technology</p>
+          <!-- C Programming -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img
+                src="https://i.ytimg.com/vi/rQoqCP7LX60/hqdefault.jpg?s…BACGAY4AUAB&rs=AOn4CLAdZxWqOhLuIJ2QGC8ZD4NrFiRIOQ"
+                alt="C Programming"
+              />
+              <div class="card-overlay">
+                <i class="fab fa-cuttlefish"></i>
+              </div>
             </div>
-            
-            <div class="categories-grid">
-                <div class="category-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Programming</h3>
-                    <p>C, C++, Java, Python</p>
-                    <span class="course-count">6 Courses</span>
+            <div class="card-content">
+              <h3>C Programming Masterclass</h3>
+              <p>
+                Learn C Programming from basics to advanced concepts with
+                practical examples
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge beginner">Beginner</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 12+ Hours
                 </div>
-                
-                <div class="category-card">
-                    <i class="fas fa-globe"></i>
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JS, React</p>
-                    <span class="course-count">3 Courses</span>
-                </div>
-                
-                <div class="category-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Backend</h3>
-                    <p>Node.js, APIs, Databases</p>
-                    <span class="course-count">2 Courses</span>
-                </div>
-                
-                <div class="category-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>AI/ML</h3>
-                    <p>Machine Learning, AI</p>
-                    <span class="course-count">1 Course</span>
-                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.9/5</span>
+                <span><i class="fas fa-users"></i> 3.1k students</span>
+              </div>
+              <a
+                href="https://youtube.com/playlist?list=PLxgZQoSe9cg1drBnejUaDD9GEJBGQ5hMt&si=n3AUVq6HEUNClYr7"
+                target="_blank"
+                class="card-button"
+              >
+                <i class="fas fa-play"></i>
+                Watch Now
+              </a>
             </div>
-        </section>
+          </div>
+
+          <!-- C++ Programming -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img src="img/c++.jpg" alt="C++ Programming" />
+              <div class="card-overlay">
+                <i class="fab fa-cuttlefish"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>C++ Complete Course</h3>
+              <p>
+                Learn C++ Programming from basics to advanced concepts with OOP
+                principles
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge intermediate">Intermediate</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 18+ Hours
+                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.7/5</span>
+                <span><i class="fas fa-users"></i> 1.9k students</span>
+              </div>
+              <a
+                href="https://youtu.be/e7sAf4SbS_g?si=WXg-Wqhe5-S_Jy_N"
+                target="_blank"
+                class="card-button"
+              >
+                <i class="fas fa-play"></i>
+                Watch Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Java Programming -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img src="img/huz_img.jpg" alt="Java Programming" />
+              <div class="card-overlay">
+                <i class="fab fa-java"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Java Complete Bootcamp</h3>
+              <p>
+                Learn Java Programming from basics to advanced concepts
+                including enterprise development
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge intermediate">Intermediate</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 25+ Hours
+                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.8/5</span>
+                <span><i class="fas fa-users"></i> 2.7k students</span>
+              </div>
+              <a
+                href="https://youtube.com/playlist?list=PL78RhpUUKSweClRi_l05UgfE3053-zkRf&si=ddvSyUC6c9JwRPXB"
+                target="_blank"
+                class="card-button"
+              >
+                <i class="fas fa-play"></i>
+                Watch Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Python Programming -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img src="img/img1.jpg" alt="Python Programming" />
+              <div class="card-overlay">
+                <i class="fab fa-python"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Python for Everyone</h3>
+              <p>
+                Complete Python programming course covering basics to advanced
+                topics with real projects
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge beginner">Beginner</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 20+ Hours
+                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.9/5</span>
+                <span><i class="fas fa-users"></i> 4.2k students</span>
+              </div>
+              <a
+                href="https://youtu.be/rfscVS0vtbw?si=example"
+                target="_blank"
+                class="card-button"
+              >
+                <i class="fas fa-play"></i>
+                Watch Now
+              </a>
+            </div>
+          </div>
+
+          <!-- DSA with C++ -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img src="img/c++dsa.jpg" alt="DSA with C++" />
+              <div class="card-overlay">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>DSA with C++</h3>
+              <p>
+                Master Data Structures and Algorithms for efficient
+                problem-solving and interviews
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge advanced">Advanced</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 35+ Hours
+                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.9/5</span>
+                <span><i class="fas fa-users"></i> 1.5k students</span>
+              </div>
+              <a
+                href="https://youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA&si=9r-Al2urj2IVb9x1"
+                target="_blank"
+                class="card-button"
+              >
+                <i class="fas fa-play"></i>
+                Watch Now
+              </a>
+            </div>
+          </div>
+
+          <!-- React JS -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img src="img/img1.jpg" alt="React JS" />
+              <div class="card-overlay">
+                <i class="fab fa-react"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>React JS Complete Guide</h3>
+              <p>
+                Build modern web applications with React JS and learn
+                component-based development
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge intermediate">Intermediate</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 22+ Hours
+                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.8/5</span>
+                <span><i class="fas fa-users"></i> 1.8k students</span>
+              </div>
+              <a href="#" class="card-button disabled">
+                <i class="fas fa-clock"></i>
+                Coming Soon
+              </a>
+            </div>
+          </div>
+
+          <!-- Node JS -->
+          <div class="note-card course-card">
+            <div class="card-image">
+              <img src="img/c_lang.jpg" alt="Node JS" />
+              <div class="card-overlay">
+                <i class="fab fa-node-js"></i>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>Node JS Backend Development</h3>
+              <p>
+                Learn server-side JavaScript with Node.js and build scalable
+                backend applications
+              </p>
+              <div class="course-info">
+                <div class="difficulty-badge intermediate">Intermediate</div>
+                <div class="duration">
+                  <i class="fas fa-clock"></i> 28+ Hours
+                </div>
+              </div>
+              <div class="card-stats">
+                <span><i class="fas fa-star"></i> 4.7/5</span>
+                <span><i class="fas fa-users"></i> 1.3k students</span>
+              </div>
+              <a href="#" class="card-button disabled">
+                <i class="fas fa-clock"></i>
+                Coming Soon
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Course Categories -->
+      <section class="categories-section">
+        <div class="section-header">
+          <h2>Browse by Category</h2>
+          <p class="section-subtitle">
+            Find courses by your preferred technology
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-card">
+            <i class="fas fa-code"></i>
+            <h3>Programming</h3>
+            <p>C, C++, Java, Python</p>
+            <span class="course-count">6 Courses</span>
+          </div>
+
+          <div class="category-card">
+            <i class="fas fa-globe"></i>
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JS, React</p>
+            <span class="course-count">3 Courses</span>
+          </div>
+
+          <div class="category-card">
+            <i class="fas fa-database"></i>
+            <h3>Backend</h3>
+            <p>Node.js, APIs, Databases</p>
+            <span class="course-count">2 Courses</span>
+          </div>
+
+          <div class="category-card">
+            <i class="fas fa-brain"></i>
+            <h3>AI/ML</h3>
+            <p>Machine Learning, AI</p>
+            <span class="course-count">1 Course</span>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <marquee>Explore premium programming courses and enhance your coding skills!</marquee>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-            <p>&copy; 2025 Code Crafter | All Rights Reserved</p>
-            <p class="author">Created with ❤️ by HUZAIF</p>
+      <div class="footer-content">
+        <marquee
+          >Explore premium programming courses and enhance your coding
+          skills!</marquee
+        >
+        <div class="social-links">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
         </div>
+        <p>&copy; 2025 Code Crafter | All Rights Reserved</p>
+        <p class="author">Created with ❤️ by HUZAIF</p>
+      </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
