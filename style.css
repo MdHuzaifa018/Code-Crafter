@@ -84,6 +84,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
+    padding-bottom: 0;
     color: white;
     position: relative;
 }
